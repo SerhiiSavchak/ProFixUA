@@ -267,4 +267,16 @@ export const translations = {
   },
 } as const;
 
-export type Translations = typeof translations.ua;
+export type TranslationsShape = typeof translations.ua;
+
+type DeepWiden<T> = {
+  [K in keyof T]: T[K] extends string
+    ? string
+    : T[K] extends readonly (infer U)[]
+      ? readonly DeepWiden<U>[]
+      : T[K] extends object
+        ? DeepWiden<T[K]>
+        : T[K];
+};
+
+export type Translations = DeepWiden<TranslationsShape>;
