@@ -1,0 +1,270 @@
+export type Language = "ua" | "ru" | "en";
+
+export const LANGUAGES: { code: Language; label: string }[] = [
+  { code: "ua", label: "UA" },
+  { code: "ru", label: "RU" },
+  { code: "en", label: "EN" },
+];
+
+export const SITE_CONFIG = {
+  city: { ua: "Львів", ru: "Львов", en: "Lviv" },
+  phone: "+380664838936",
+  telegramUrl: "https://t.me/nikoservc",
+  viberUrl: "viber://chat?number=%2B380664838936",
+  hours: { ua: "Щодня 08:00–22:00", ru: "Ежедневно 08:00–22:00", en: "Daily 08:00–22:00" },
+  serviceArea: {
+    ua: "Працюємо по місту та в області",
+    ru: "Работаем по городу и области",
+    en: "We work in the city and region",
+  },
+} as const;
+
+export const GALLERY_IMAGES = [
+
+  { src: "/images/gallery/work-2.jpg", alt: { ua: "Виконана робота 2", ru: "Выполненная работа 2", en: "Completed work 2" } },
+  { src: "/images/gallery/work-3.jpg", alt: { ua: "Виконана робота 3", ru: "Выполненная работа 3", en: "Completed work 3" } },
+  { src: "/images/gallery/work-4.jpg", alt: { ua: "Виконана робота 4", ru: "Выполненная работа 4", en: "Completed work 4" } },
+ 
+];
+
+export const translations = {
+  ua: {
+    nav: {
+      services: "Послуги",
+      advantages: "Переваги",
+      howWeWork: "Як ми працюємо",
+      reviews: "Відгуки",
+      gallery: "Галерея",
+      contacts: "Контакти",
+    },
+    hero: {
+      title: "Сантехнік та електрик у Львові",
+      subtitle: "Терміновий виїзд • Гарантія • Працюємо щодня",
+      badges: ["Безкоштовна консультація", "Чесні ціни", "Швидко"],
+      cta: {
+        call: "Зателефонувати",
+        telegram: "Написати в Telegram",
+        viber: "Viber",
+      },
+    },
+    services: {
+      title: "Наші послуги",
+      plumbing: {
+        title: "Сантехніка",
+        items: ["Протікання", "Засори", "Унітази, раковини, змішувачі", "Монтаж та заміна труб", "Інші сантехнічні роботи"],
+      },
+      electrical: {
+        title: "Електрика",
+        items: ["Розетки та вимикачі", "Освітлення", "Електрощит", "Проводка", "Аварійні роботи"],
+      },
+    },
+    whyUs: {
+      title: "Чому обирають нас",
+      items: [
+        { title: "Швидкий виїзд", description: "Приїдемо протягом 1-2 годин" },
+        { title: "Гарантія на роботи", description: "Надаємо гарантію на всі виконані роботи" },
+        { title: "Досвід 10+ років", description: "Професійні майстри з великим досвідом" },
+        { title: "Чесні ціни", description: "Без прихованих платежів та накруток" },
+        { title: "Чистота", description: "Прибираємо за собою після роботи" },
+        { title: "На зв'язку", description: "Консультуємо навіть після виконання робіт" },
+      ],
+    },
+    steps: {
+      title: "Як ми працюємо",
+      items: [
+        { title: "Зателефонуйте нам", description: "Опишіть проблему по телефону або в месенджері" },
+        { title: "Узгодження", description: "Домовляємось про час та попередню вартість" },
+        { title: "Виконання робіт", description: "Майстер приїжджає та виконує роботу якісно" },
+        { title: "Оплата", description: "Оплачуєте тільки після перевірки результату" },
+      ],
+    },
+    reviews: {
+      title: "Відгуки клієнтів",
+      items: [
+        { name: "Олена М.", text: "Викликала майстра терміново — протікала труба. Приїхав за годину, швидко все полагодив. Дуже задоволена!" },
+        { name: "Андрій К.", text: "Замінювали проводку в квартирі. Все зробили акуратно, прибрали за собою. Рекомендую!" },
+        { name: "Марія Т.", text: "Встановлювали нову раковину та змішувач. Працюють професійно, ціни адекватні. Дякую!" },
+      ],
+    },
+    gallery: {
+      title: "Виконані роботи",
+    },
+    prices: {
+      title: "Вартість послуг",
+      description: "Вартість залежить від складності. Ціну узгоджуємо перед початком робіт. Оплата після виконання.",
+      cta: "Зателефонуйте для безкоштовної консультації та попередньої оцінки вартості",
+    },
+    contacts: {
+      title: "Контакти",
+      schedule: "Графік роботи",
+      area: "Зона обслуговування",
+    },
+    mobileCta: {
+      call: "Зателефонувати",
+      write: "Написати",
+    },
+    footer: {
+      rights: "Всі права захищено",
+    },
+  },
+  ru: {
+    nav: {
+      services: "Услуги",
+      advantages: "Преимущества",
+      howWeWork: "Как мы работаем",
+      reviews: "Отзывы",
+      gallery: "Галерея",
+      contacts: "Контакты",
+    },
+    hero: {
+      title: "Сантехник и электрик во Львове",
+      subtitle: "Срочный выезд • Гарантия • Работаем ежедневно",
+      badges: ["Бесплатная консультация", "Честные цены", "Быстро"],
+      cta: {
+        call: "Позвонить",
+        telegram: "Написать в Telegram",
+        viber: "Viber",
+      },
+    },
+    services: {
+      title: "Наши услуги",
+      plumbing: {
+        title: "Сантехника",
+        items: ["Протечки", "Засоры", "Унитазы, раковины, смесители", "Монтаж и замена труб", "Другие сантехнические работы"],
+      },
+      electrical: {
+        title: "Электрика",
+        items: ["Розетки и выключатели", "Освещение", "Электрощит", "Проводка", "Аварийные работы"],
+      },
+    },
+    whyUs: {
+      title: "Почему выбирают нас",
+      items: [
+        { title: "Быстрый выезд", description: "Приедем в течение 1-2 часов" },
+        { title: "Гарантия на работы", description: "Предоставляем гарантию на все выполненные работы" },
+        { title: "Опыт 10+ лет", description: "Профессиональные мастера с большим опытом" },
+        { title: "Честные цены", description: "Без скрытых платежей и накруток" },
+        { title: "Чистота", description: "Убираем за собой после работы" },
+        { title: "На связи", description: "Консультируем даже после выполнения работ" },
+      ],
+    },
+    steps: {
+      title: "Как мы работаем",
+      items: [
+        { title: "Позвоните нам", description: "Опишите проблему по телефону или в мессенджере" },
+        { title: "Согласование", description: "Договариваемся о времени и предварительной стоимости" },
+        { title: "Выполнение работ", description: "Мастер приезжает и выполняет работу качественно" },
+        { title: "Оплата", description: "Оплачиваете только после проверки результата" },
+      ],
+    },
+    reviews: {
+      title: "Отзывы клиентов",
+      items: [
+        { name: "Елена М.", text: "Вызвала мастера срочно — протекала труба. Приехал за час, быстро все починил. Очень довольна!" },
+        { name: "Андрей К.", text: "Меняли проводку в квартире. Все сделали аккуратно, убрали за собой. Рекомендую!" },
+        { name: "Мария Т.", text: "Устанавливали новую раковину и смеситель. Работают профессионально, цены адекватные. Спасибо!" },
+      ],
+    },
+    gallery: {
+      title: "Выполненные работы",
+    },
+    prices: {
+      title: "Стоимость услуг",
+      description: "Стоимость зависит от сложности. Цену согласовываем перед началом работ. Оплата после выполнения.",
+      cta: "Позвоните для бесплатной консультации и предварительной оценки стоимости",
+    },
+    contacts: {
+      title: "Контакты",
+      schedule: "График работы",
+      area: "Зона обслуживания",
+    },
+    mobileCta: {
+      call: "Позвонить",
+      write: "Написать",
+    },
+    footer: {
+      rights: "Все права защищены",
+    },
+  },
+  en: {
+    nav: {
+      services: "Services",
+      advantages: "Why Us",
+      howWeWork: "How We Work",
+      reviews: "Reviews",
+      gallery: "Gallery",
+      contacts: "Contacts",
+    },
+    hero: {
+      title: "Plumber & Electrician in Lviv",
+      subtitle: "Emergency Service • Warranty • Available Daily",
+      badges: ["Free Consultation", "Fair Prices", "Fast"],
+      cta: {
+        call: "Call Now",
+        telegram: "Message on Telegram",
+        viber: "Viber",
+      },
+    },
+    services: {
+      title: "Our Services",
+      plumbing: {
+        title: "Plumbing",
+        items: ["Leaks", "Clogs", "Toilets, sinks, faucets", "Pipe installation & replacement", "Other plumbing work"],
+      },
+      electrical: {
+        title: "Electrical",
+        items: ["Outlets & switches", "Lighting", "Electrical panel", "Wiring", "Emergency repairs"],
+      },
+    },
+    whyUs: {
+      title: "Why Choose Us",
+      items: [
+        { title: "Fast Response", description: "We arrive within 1-2 hours" },
+        { title: "Work Guarantee", description: "We provide warranty on all completed work" },
+        { title: "10+ Years Experience", description: "Professional masters with extensive experience" },
+        { title: "Fair Prices", description: "No hidden fees or markups" },
+        { title: "Cleanliness", description: "We clean up after ourselves" },
+        { title: "Always Available", description: "We consult even after completing the work" },
+      ],
+    },
+    steps: {
+      title: "How We Work",
+      items: [
+        { title: "Call Us", description: "Describe your problem by phone or messenger" },
+        { title: "Agreement", description: "We agree on time and preliminary cost" },
+        { title: "Work Execution", description: "The master arrives and does quality work" },
+        { title: "Payment", description: "You pay only after checking the result" },
+      ],
+    },
+    reviews: {
+      title: "Customer Reviews",
+      items: [
+        { name: "Elena M.", text: "Called urgently — pipe was leaking. Arrived in an hour, fixed everything quickly. Very satisfied!" },
+        { name: "Andrew K.", text: "Replaced wiring in the apartment. Did everything neatly, cleaned up. Recommend!" },
+        { name: "Maria T.", text: "Installed a new sink and faucet. Work professionally, prices are fair. Thank you!" },
+      ],
+    },
+    gallery: {
+      title: "Completed Works",
+    },
+    prices: {
+      title: "Service Prices",
+      description: "Price depends on complexity. We agree on the price before starting. Payment after completion.",
+      cta: "Call for a free consultation and preliminary cost estimate",
+    },
+    contacts: {
+      title: "Contacts",
+      schedule: "Working Hours",
+      area: "Service Area",
+    },
+    mobileCta: {
+      call: "Call",
+      write: "Message",
+    },
+    footer: {
+      rights: "All rights reserved",
+    },
+  },
+} as const;
+
+export type Translations = typeof translations.ua;
