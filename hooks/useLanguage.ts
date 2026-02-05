@@ -23,7 +23,7 @@ export function useLanguage() {
     localStorage.setItem(STORAGE_KEY, lang);
   }, []);
 
-const t: Translations = translations[language];
+  const t: Translations = translations[language] as Translations;
 
   return { language, setLanguage, t, isLoaded };
 }
