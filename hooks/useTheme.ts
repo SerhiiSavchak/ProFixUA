@@ -15,7 +15,11 @@ export function useTheme() {
     const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
     if (stored && ["light", "dark"].includes(stored)) {
       setThemeState(stored);
-      document.documentElement.classList.toggle("dark", stored === "dark");
+      if (stored === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
     }
     setIsLoaded(true);
   }, []);
@@ -23,7 +27,11 @@ export function useTheme() {
   const setTheme = useCallback((newTheme: Theme) => {
     setThemeState(newTheme);
     localStorage.setItem(STORAGE_KEY, newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    if (newTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
   }, []);
 
   const toggleTheme = useCallback(() => {
