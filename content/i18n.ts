@@ -95,10 +95,10 @@ export const translations = {
       workPayment: {
         title: "Оплата роботи майстра",
         items: [
-          "Вартість робіт залежить від складності та обсягу завдання.",
-          "Остаточну ціну майстер озвучує після огляду та діагностики, але до початку робіт.",
-          "Жодних прихованих платежів або несподіваних доплат.",
-          "Оплата здійснюється після виконання робіт і перевірки результату клієнтом.",
+          "Вартість робіт залежить від складності та обсягу завдання",
+          "Остаточну ціну майстер озвучує після огляду та діагностики, але до початку робіт",
+          "Жодних прихованих платежів або несподіваних доплат",
+          "Оплата здійснюється після виконання робіт і перевірки результату клієнтом",
         ],
       },
       materialsPayment: {
@@ -107,30 +107,30 @@ export const translations = {
         above500: {
           label: "Якщо вартість матеріалів перевищує 500 грн:",
           items: [
-            "необхідні деталі можуть бути придбані у фізичному магазині або замовлені через інтернет;",
-            "покупка відбувається лише за попередньою домовленістю з клієнтом;",
-            "матеріали купуються на ім'я клієнта;",
-            "оплата матеріалів здійснюється за рахунок клієнта.",
+            "Необхідні деталі можуть бути придбані у фізичному магазині або замовлені через інтернет",
+            "Покупка відбувається лише за попередньою домовленістю з клієнтом",
+            "Матеріали купуються на ім'я клієнта",
+            "Оплата матеріалів здійснюється за рахунок клієнта",
           ],
         },
         below500: {
           label: "Якщо вартість матеріалів до 500 грн:",
           items: [
-            "майстер може придбати їх у фізичному магазині по дорозі до клієнта;",
-            "покупка відбувається лише за попередньою домовленістю з клієнтом;",
-            "вартість матеріалів також оплачується клієнтом.",
+            "Майстер може придбати їх у фізичному магазині по дорозі до клієнта",
+            "Покупка відбувається лише за попередньою домовленістю з клієнтом",
+            "Вартість матеріалів також оплачується клієнтом",
           ],
         },
       },
       importantInfo: {
         title: "Важлива інформація",
         items: [
-          "Диспетчерський сервіс не здійснює оплату матеріалів.",
-          "Якщо матеріали замовляє клієнт — відповідальність за оплату та комплектацію несе клієнт.",
-          "Якщо матеріали замовляє майстер — відповідальність за оплату та комплектацію несе майстер.",
+          "Диспетчерський сервіс не здійснює оплату матеріалів",
+          "Якщо матеріали замовляє клієнт — відповідальність за оплату та комплектацію несе клієнт",
+          "Якщо матеріали замовляє майстер — відповідальність за оплату та комплектацію несе майстер",
         ],
       },
-      cta: "Маєте запитання щодо вартості? Зателефонуйте або напишіть — проконсультуємо безкоштовно та без зобов'язань.",
+      cta: "Маєте запитання щодо вартості? Зателефонуйте або напишіть — проконсультуємо безкоштовно та без зобов'язань",
     },
     contacts: {
       title: "Контакти",
@@ -212,10 +212,10 @@ export const translations = {
       workPayment: {
         title: "Оплата работы мастера",
         items: [
-          "Стоимость работ зависит от сложности и объёма задания.",
-          "Окончательную цену мастер озвучивает после осмотра и диагностики, но до начала работ.",
-          "Никаких скрытых платежей или неожиданных доплат.",
-          "Оплата осуществляется после выполнения работ и проверки результата клиентом.",
+          "Стоимость работ зависит от сложности и объёма задания",
+          "Окончательную цену мастер озвучивает после осмотра и диагностики, но до начала работ",
+          "Никаких скрытых платежей или неожиданных доплат",
+          "Оплата осуществляется после выполнения работ и проверки результата клиентом",
         ],
       },
       materialsPayment: {
@@ -224,30 +224,30 @@ export const translations = {
         above500: {
           label: "Если стоимость материалов превышает 500 грн:",
           items: [
-            "необходимые детали могут быть приобретены в физическом магазине или заказаны через интернет;",
-            "покупка происходит только по предварительной договорённости с клиентом;",
-            "материалы приобретаются на имя клиента;",
-            "оплата материалов осуществляется за счёт клиента.",
+            "Необходимые детали могут быть приобретены в физическом магазине или заказаны через интернет",
+            "Покупка происходит только по предварительной договорённости с клиентом",
+            "Материалы приобретаются на имя клиента",
+            "Оплата материалов осуществляется за счёт клиента",
           ],
         },
         below500: {
           label: "Если стоимость материалов до 500 грн:",
           items: [
-            "мастер может приобрести их в физическом магазине по дороге к клиенту;",
-            "покупка происходит только по предварительной договорённости с клиентом;",
-            "стоимость материалов также оплачивается клиентом.",
+            "Мастер может приобрести их в физическом магазине по дороге к клиенту",
+            "Покупка происходит только по предварительной договорённости с клиентом",
+            "Стоимость материалов также оплачивается клиентом",
           ],
         },
       },
       importantInfo: {
         title: "Важная информация",
         items: [
-          "Диспетчерский сервис не осуществляет оплату материалов.",
-          "Если материалы заказывает клиент — ответственность за оплату и комплектацию несёт клиент.",
-          "Если материалы заказывает мастер — ответственность за оплату и комплектацию несёт мастер.",
+          "Диспетчерский сервис не осуществляет оплату материалов",
+          "Если материалы заказывает клиент — ответственность за оплату и комплектацию несёт клиент",
+          "Если материалы заказывает мастер — ответственность за оплату и комплектацию несёт мастер",
         ],
       },
-      cta: "Есть вопросы по стоимости? Позвоните или напишите — проконсультируем бесплатно и без обязательств.",
+      cta: "Есть вопросы по стоимости? Позвоните или напишите — проконсультируем бесплатно и без обязательств",
     },
     contacts: {
       title: "Контакты",
@@ -329,10 +329,10 @@ export const translations = {
       workPayment: {
         title: "Payment for Services",
         items: [
-          "The cost depends on the complexity and scope of the task.",
-          "The final price is provided after inspection and diagnostics, but before work begins.",
-          "No hidden fees or unexpected surcharges.",
-          "Payment is made after the work is completed and the result is verified by the client.",
+          "The cost depends on the complexity and scope of the task",
+          "The final price is provided after inspection and diagnostics, but before work begins",
+          "No hidden fees or unexpected surcharges",
+          "Payment is made after the work is completed and the result is verified by the client",
         ],
       },
       materialsPayment: {
@@ -341,30 +341,30 @@ export const translations = {
         above500: {
           label: "If the cost of materials exceeds 500 UAH:",
           items: [
-            "the necessary parts can be purchased at a physical store or ordered online;",
-            "the purchase is made only with prior agreement with the client;",
-            "materials are purchased in the client's name;",
-            "materials are paid for by the client.",
+            "The necessary parts can be purchased at a physical store or ordered online",
+            "The purchase is made only with prior agreement with the client",
+            "Materials are purchased in the client's name",
+            "Materials are paid for by the client",
           ],
         },
         below500: {
           label: "If the cost of materials is under 500 UAH:",
           items: [
-            "the master can purchase them at a store on the way to the client;",
-            "the purchase is made only with prior agreement with the client;",
-            "the cost of materials is also paid by the client.",
+            "The master can purchase them at a store on the way to the client",
+            "The purchase is made only with prior agreement with the client",
+            "The cost of materials is also paid by the client",
           ],
         },
       },
       importantInfo: {
         title: "Important Information",
         items: [
-          "The dispatch service does not pay for materials.",
-          "If the client orders materials — the client is responsible for payment and assembly.",
-          "If the master orders materials — the master is responsible for payment and assembly.",
+          "The dispatch service does not pay for materials",
+          "If the client orders materials — the client is responsible for payment and assembly",
+          "If the master orders materials — the master is responsible for payment and assembly",
         ],
       },
-      cta: "Have questions about pricing? Call or message us — we consult for free and without obligations.",
+      cta: "Have questions about pricing? Call or message us — we consult for free and without obligations",
     },
     contacts: {
       title: "Contacts",
