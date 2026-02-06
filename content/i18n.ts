@@ -207,9 +207,47 @@ export const translations = {
       title: "Выполненные работы",
     },
     prices: {
-      title: "Стоимость услуг",
-      description: "Стоимость зависит от сложности. Цену согласовываем перед началом работ. Оплата после выполнения.",
-      cta: "Позвоните для бесплатной консультации и предварительной оценки стоимости",
+      title: "Стоимость и оплата услуг",
+      intro: "Мы всегда работаем прозрачно и честно. Все условия и стоимость работ обязательно согласовываются с клиентом до начала выполнения.",
+      workPayment: {
+        title: "Оплата работы мастера",
+        items: [
+          "Стоимость работ зависит от сложности и объёма задания.",
+          "Окончательную цену мастер озвучивает после осмотра и диагностики, но до начала работ.",
+          "Никаких скрытых платежей или неожиданных доплат.",
+          "Оплата осуществляется после выполнения работ и проверки результата клиентом.",
+        ],
+      },
+      materialsPayment: {
+        title: "Оплата материалов и запчастей",
+        intro: "В некоторых случаях для ремонта могут понадобиться дополнительные материалы или запчасти. Мы действуем по простой и понятной схеме:",
+        above500: {
+          label: "Если стоимость материалов превышает 500 грн:",
+          items: [
+            "необходимые детали могут быть приобретены в физическом магазине или заказаны через интернет;",
+            "покупка происходит только по предварительной договорённости с клиентом;",
+            "материалы приобретаются на имя клиента;",
+            "оплата материалов осуществляется за счёт клиента.",
+          ],
+        },
+        below500: {
+          label: "Если стоимость материалов до 500 грн:",
+          items: [
+            "мастер может приобрести их в физическом магазине по дороге к клиенту;",
+            "покупка происходит только по предварительной договорённости с клиентом;",
+            "стоимость материалов также оплачивается клиентом.",
+          ],
+        },
+      },
+      importantInfo: {
+        title: "Важная информация",
+        items: [
+          "Диспетчерский сервис не осуществляет оплату материалов.",
+          "Если материалы заказывает клиент — ответственность за оплату и комплектацию несёт клиент.",
+          "Если материалы заказывает мастер — ответственность за оплату и комплектацию несёт мастер.",
+        ],
+      },
+      cta: "Есть вопросы по стоимости? Позвоните или напишите — проконсультируем бесплатно и без обязательств.",
     },
     contacts: {
       title: "Контакты",
@@ -286,9 +324,47 @@ export const translations = {
       title: "Completed Works",
     },
     prices: {
-      title: "Service Prices",
-      description: "Price depends on complexity. We agree on the price before starting. Payment after completion.",
-      cta: "Call for a free consultation and preliminary cost estimate",
+      title: "Pricing & Payment",
+      intro: "We always work transparently and honestly. All terms and costs are agreed with the client before work begins.",
+      workPayment: {
+        title: "Payment for Services",
+        items: [
+          "The cost depends on the complexity and scope of the task.",
+          "The final price is provided after inspection and diagnostics, but before work begins.",
+          "No hidden fees or unexpected surcharges.",
+          "Payment is made after the work is completed and the result is verified by the client.",
+        ],
+      },
+      materialsPayment: {
+        title: "Payment for Materials & Parts",
+        intro: "In some cases, additional materials or parts may be needed for the repair. We follow a simple and clear process:",
+        above500: {
+          label: "If the cost of materials exceeds 500 UAH:",
+          items: [
+            "the necessary parts can be purchased at a physical store or ordered online;",
+            "the purchase is made only with prior agreement with the client;",
+            "materials are purchased in the client's name;",
+            "materials are paid for by the client.",
+          ],
+        },
+        below500: {
+          label: "If the cost of materials is under 500 UAH:",
+          items: [
+            "the master can purchase them at a store on the way to the client;",
+            "the purchase is made only with prior agreement with the client;",
+            "the cost of materials is also paid by the client.",
+          ],
+        },
+      },
+      importantInfo: {
+        title: "Important Information",
+        items: [
+          "The dispatch service does not pay for materials.",
+          "If the client orders materials — the client is responsible for payment and assembly.",
+          "If the master orders materials — the master is responsible for payment and assembly.",
+        ],
+      },
+      cta: "Have questions about pricing? Call or message us — we consult for free and without obligations.",
     },
     contacts: {
       title: "Contacts",
