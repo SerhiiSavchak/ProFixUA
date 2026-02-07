@@ -24,6 +24,7 @@ export const GALLERY_IMAGES = [
   { src: "/images/gallery/work-2.jpg", alt: { ua: "Виконана робота 2", ru: "Выполненная работа 2", en: "Completed work 2" } },
   { src: "/images/gallery/work-3.jpg", alt: { ua: "Виконана робота 3", ru: "Выполненная работа 3", en: "Completed work 3" } },
   { src: "/images/gallery/work-4.jpg", alt: { ua: "Виконана робота 4", ru: "Выполненная работа 4", en: "Completed work 4" } },
+  { src: "/images/gallery/work-5.jpg", alt: { ua: "Виконана робота 5", ru: "Выполненная работа 5", en: "Completed work 5" } },
  
 ];
 
