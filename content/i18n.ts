@@ -107,7 +107,7 @@ export const translations = {
         above500: {
           label: "Якщо вартість матеріалів перевищує 500 грн:",
           items: [
-            "Необхідні деталі можуть бути придбані у фізичному магазині або замовлені через інтернет",
+            "необхідні деталі замовляються через інтернет",
             "Покупка відбувається лише за попередньою домовленістю з клієнтом",
             "Матеріали купуються на ім'я клієнта",
             "Оплата матеріалів здійснюється за рахунок клієнта",
@@ -224,7 +224,7 @@ export const translations = {
         above500: {
           label: "Если стоимость материалов превышает 500 грн:",
           items: [
-            "Необходимые детали могут быть приобретены в физическом магазине или заказаны через интернет",
+            "необходимые детали заказываются через интернет",
             "Покупка происходит только по предварительной договорённости с клиентом",
             "Материалы приобретаются на имя клиента",
             "Оплата материалов осуществляется за счёт клиента",
@@ -341,7 +341,7 @@ export const translations = {
         above500: {
           label: "If the cost of materials exceeds 500 UAH:",
           items: [
-            "The necessary parts can be purchased at a physical store or ordered online",
+            "necessary parts are ordered online",
             "The purchase is made only with prior agreement with the client",
             "Materials are purchased in the client's name",
             "Materials are paid for by the client",
