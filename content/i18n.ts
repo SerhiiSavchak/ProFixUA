@@ -1,4 +1,5 @@
 export type Language = "ua" | "ru" | "en";
+export type City = "lviv" | "dnipro";
 
 export const LANGUAGES: { code: Language; label: string }[] = [
   { code: "ua", label: "UA" },
@@ -6,18 +7,53 @@ export const LANGUAGES: { code: Language; label: string }[] = [
   { code: "en", label: "EN" },
 ];
 
-export const SITE_CONFIG = {
-  city: { ua: "Львів", ru: "Львов", en: "Lviv" },
-  phone: "+380664838936",
-  telegramUrl: "https://t.me/nikoservc",
-  viberUrl: "viber://chat?number=%2B380664838936",
-  hours: { ua: "Щодня 08:00–22:00", ru: "Ежедневно 08:00–22:00", en: "Daily 08:00–22:00" },
-  serviceArea: {
-    ua: "Працюємо по місту та в області",
-    ru: "Работаем по городу и области",
-    en: "We work in the city and region",
+export const CITIES: { code: City; label: { ua: string; ru: string; en: string } }[] = [
+  { code: "lviv", label: { ua: "Львів", ru: "Львов", en: "Lviv" } },
+  { code: "dnipro", label: { ua: "Дніпро", ru: "Днепр", en: "Dnipro" } },
+];
+
+export const CITY_CONFIG: Record<
+  City,
+  {
+    name: { ua: string; ru: string; en: string };
+    nameInLocative: { ua: string; ru: string; en: string }; // В предложном падеже (у/в/в)
+    phone: string;
+    telegramUrl: string;
+    viberUrl: string;
+    hours: { ua: string; ru: string; en: string };
+    serviceArea: { ua: string; ru: string; en: string };
+  }
+> = {
+  lviv: {
+    name: { ua: "Львів", ru: "Львов", en: "Lviv" },
+    nameInLocative: { ua: "Львові", ru: "во Львове", en: "in Lviv" },
+    phone: "+380664838936",
+    telegramUrl: "https://t.me/nikoservc",
+    viberUrl: "viber://chat?number=%2B380664838936",
+    hours: { ua: "Щодня 08:00–22:00", ru: "Ежедневно 08:00–22:00", en: "Daily 08:00–22:00" },
+    serviceArea: {
+      ua: "Працюємо по місту та в області",
+      ru: "Работаем по городу и области",
+      en: "We work in the city and region",
+    },
   },
-} as const;
+  dnipro: {
+    name: { ua: "Дніпро", ru: "Днепр", en: "Dnipro" },
+    nameInLocative: { ua: "Дніпрі", ru: "в Днепре", en: "in Dnipro" },
+    phone: "+380664838936",
+    telegramUrl: "https://t.me/nikoservc",
+    viberUrl: "viber://chat?number=%2B380664838936",
+    hours: { ua: "Щодня 08:00–22:00", ru: "Ежедневно 08:00–22:00", en: "Daily 08:00–22:00" },
+    serviceArea: {
+      ua: "Працюємо по місту та в області",
+      ru: "Работаем по городу и области",
+      en: "We work in the city and region",
+    },
+  },
+};
+
+// Для обратной совместимости
+export const SITE_CONFIG = CITY_CONFIG.lviv;
 
 export const GALLERY_IMAGES = [
 
@@ -39,7 +75,7 @@ export const translations = {
       contacts: "Контакти",
     },
     hero: {
-      title: "Сантехнік та електрик у Львові",
+      title: "Сантехнік та електрик у {city}",
       subtitle: "Терміновий виїзд • Гарантія • Працюємо щодня",
       badges: ["Безкоштовна консультація", "Чесні ціни", "Швидко"],
       cta: {
@@ -126,7 +162,7 @@ export const translations = {
       importantInfo: {
         title: "Важлива інформація",
         items: [
-          "Диспетчерський сервіс не здійснює оплату матеріалів",
+          "Диспетчерський сервіс не здійснює оплату матеріалів та не несе відповідальності за їх оплату, придбання, постачання та комплектацію.",
           "Якщо матеріали замовляє клієнт — відповідальність за оплату та комплектацію несе клієнт",
           "Якщо матеріали замовляє майстер — відповідальність за оплату та комплектацію несе майстер",
         ],
@@ -156,7 +192,7 @@ export const translations = {
       contacts: "Контакты",
     },
     hero: {
-      title: "Сантехник и электрик во Львове",
+      title: "Сантехник и электрик {city}",
       subtitle: "Срочный выезд • Гарантия • Работаем ежедневно",
       badges: ["Бесплатная консультация", "Честные цены", "Быстро"],
       cta: {
@@ -243,7 +279,7 @@ export const translations = {
       importantInfo: {
         title: "Важная информация",
         items: [
-          "Диспетчерский сервис не осуществляет оплату материалов",
+          "Диспетчерский сервис не осуществляет оплату материалов и не несёт ответственности за их оплату, приобретение, поставку и комплектацию.",
           "Если материалы заказывает клиент — ответственность за оплату и комплектацию несёт клиент",
           "Если материалы заказывает мастер — ответственность за оплату и комплектацию несёт мастер",
         ],
@@ -273,7 +309,7 @@ export const translations = {
       contacts: "Contacts",
     },
     hero: {
-      title: "Plumber & Electrician in Lviv",
+      title: "Plumber & Electrician {city}",
       subtitle: "Emergency Service • Warranty • Available Daily",
       badges: ["Free Consultation", "Fair Prices", "Fast"],
       cta: {
@@ -360,7 +396,7 @@ export const translations = {
       importantInfo: {
         title: "Important Information",
         items: [
-          "The dispatch service does not pay for materials",
+          "The dispatch service does not pay for materials and is not responsible for their payment, purchase, delivery, or assembly.",
           "If the client orders materials — the client is responsible for payment and assembly",
           "If the master orders materials — the master is responsible for payment and assembly",
         ],

@@ -7,7 +7,8 @@ import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { useTranslation } from "@/context/LanguageContext";
-import { SITE_CONFIG } from "@/content/i18n";
+import { useCityContext } from "@/context/CityContext";
+import { CITY_CONFIG } from "@/content/i18n";
 
 function MaterialsBlock({
   label,
@@ -36,6 +37,8 @@ function MaterialsBlock({
 
 export function Prices() {
   const { t } = useTranslation();
+  const { city } = useCityContext();
+  const cityConfig = CITY_CONFIG[city];
 
   return (
     <Section id="prices">
@@ -153,7 +156,7 @@ export function Prices() {
           {/* CTA with Image */}
           <AnimatedSection animation="fade-up" delay={400}>
             <a
-              href={`tel:${SITE_CONFIG.phone}`}
+              href={`tel:${cityConfig.phone}`}
               className="group flex flex-col md:flex-row items-stretch rounded-2xl bg-primary/10 border border-primary/20 overflow-hidden transition-all duration-300 hover:bg-primary/15 hover:border-primary/30 hover:shadow-lg"
             >
               <div className="relative h-40 md:h-auto md:w-48 flex-shrink-0 overflow-hidden">

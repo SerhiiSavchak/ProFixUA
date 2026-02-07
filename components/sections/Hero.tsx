@@ -7,10 +7,16 @@ import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { useTranslation } from "@/context/LanguageContext";
-import { SITE_CONFIG } from "@/content/i18n";
+import { useCityContext } from "@/context/CityContext";
+import { CITY_CONFIG } from "@/content/i18n";
 
 export function Hero() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+  const { city } = useCityContext();
+  const cityConfig = CITY_CONFIG[city];
+  
+  // Заменяем {city} в заголовке на правильное склонение города (в предложном падеже)
+  const heroTitle = t.hero.title.replace("{city}", cityConfig.nameInLocative[language]);
 
   return (
     <section className="relative bg-gradient-to-br from-accent/50 via-background to-primary/5 pt-8 pb-12 md:pt-12 md:pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
@@ -34,7 +40,7 @@ export function Hero() {
 
             <AnimatedSection animation="fade-up" delay={200}>
               <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground leading-tight text-balance">
-                {t.hero.title}
+                {heroTitle}
               </h1>
             </AnimatedSection>
 
@@ -47,7 +53,7 @@ export function Hero() {
             <AnimatedSection animation="fade-up" delay={400}>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button
-                  href={`tel:${SITE_CONFIG.phone}`}
+                  href={`tel:${cityConfig.phone}`}
                   variant="primary"
                   size="lg"
                   className="hover-lift group"
@@ -56,7 +62,7 @@ export function Hero() {
                   {t.hero.cta.call}
                 </Button>
                 <Button
-                  href={SITE_CONFIG.telegramUrl}
+                  href={cityConfig.telegramUrl}
                   variant="outline"
                   size="lg"
                   target="_blank"
@@ -72,7 +78,7 @@ export function Hero() {
             <AnimatedSection animation="fade-up" delay={500}>
               <div className="mt-4 flex justify-center lg:justify-start">
                 <a
-                  href={SITE_CONFIG.viberUrl}
+                  href={cityConfig.viberUrl}
                   className="text-primary hover:text-primary/80 font-medium transition-colors underline underline-offset-4 hover:underline-offset-8"
                 >
                   {t.hero.cta.viber}

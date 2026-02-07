@@ -13,27 +13,30 @@ import { Contacts } from "@/components/sections/Contacts";
 import { MobileCTA } from "@/components/sections/MobileCTA";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ThemeProvider } from "@/context/ThemeContext";
+import { CityProvider } from "@/context/CityContext";
 import { Loader } from "@/components/ui/Loader";
 
 export default function Home() {
   return (
     <ThemeProvider>
-      <LanguageProvider>
-        <Loader />
-        <Header />
-        <main className="min-h-screen pb-20 md:pb-0">
-          <Hero />
-          <Services />
-          <WhyUs />
-          <Steps />
-          <Reviews />
-          <Gallery />
-          <Prices />
-          <Contacts />
-          <MobileCTA />
-        </main>
-        <Footer />
-      </LanguageProvider>
+      <CityProvider>
+        <LanguageProvider>
+          <Loader />
+          <Header />
+          <main className="min-h-screen pb-20 md:pb-0">
+            <Hero />
+            <Services />
+            <WhyUs />
+            <Steps />
+            <Reviews />
+            <Gallery />
+            <Prices />
+            <Contacts />
+            <MobileCTA />
+          </main>
+          <Footer />
+        </LanguageProvider>
+      </CityProvider>
     </ThemeProvider>
   );
 }

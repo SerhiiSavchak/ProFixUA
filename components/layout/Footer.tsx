@@ -3,10 +3,13 @@
 import { Container } from "./Container";
 import { Logo } from "@/components/ui/Logo";
 import { useTranslation } from "@/context/LanguageContext";
-import { SITE_CONFIG } from "@/content/i18n";
+import { useCityContext } from "@/context/CityContext";
+import { CITY_CONFIG } from "@/content/i18n";
 
 export function Footer() {
   const { t } = useTranslation();
+  const { city } = useCityContext();
+  const cityConfig = CITY_CONFIG[city];
   const currentYear = new Date().getFullYear();
 
   return (
@@ -16,10 +19,10 @@ export function Footer() {
           <Logo size="sm" />
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <a
-              href={`tel:${SITE_CONFIG.phone}`}
+              href={`tel:${cityConfig.phone}`}
               className="hover:text-primary transition-colors"
             >
-              {SITE_CONFIG.phone}
+              {cityConfig.phone}
             </a>
           </div>
           <p className="text-sm text-muted-foreground">
