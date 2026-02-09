@@ -13,10 +13,12 @@ import { CITY_CONFIG } from "@/content/i18n";
 export function Hero() {
   const { t, language } = useTranslation();
   const { city } = useCityContext();
-  const cityConfig = CITY_CONFIG[city];
+  const cityConfig = city ? CITY_CONFIG[city] : null;
   
-  // Заменяем {city} в заголовке на правильное склонение города (в предложном падеже)
-  const heroTitle = t.hero.title.replace("{city}", cityConfig.nameInLocative[language]);
+  // When city is selected, inject city name; otherwise show title without city
+  const heroTitle = city && cityConfig
+    ? t.hero.title.replace("{city}", cityConfig.nameInLocative[language])
+    : t.hero.title.replace(/\s*(\{city\}|у \{city\}|в \{city\}|\{city\})/i, "").trim();
 
   return (
     <section className="relative bg-gradient-to-br from-accent/50 via-background to-primary/5 pt-8 pb-12 md:pt-12 md:pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
@@ -53,7 +55,7 @@ export function Hero() {
             <AnimatedSection animation="fade-up" delay={400}>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button
-                  href={`tel:${cityConfig.phone}`}
+                  href={`tel:${cityConfig?.phone ?? "+380664838936"}`}
                   variant="primary"
                   size="lg"
                   className="hover-lift group"
@@ -62,7 +64,7 @@ export function Hero() {
                   {t.hero.cta.call}
                 </Button>
                 <Button
-                  href={cityConfig.telegramUrl}
+                  href={cityConfig?.telegramUrl ?? "https://t.me/nikoservc"}
                   variant="outline"
                   size="lg"
                   target="_blank"
@@ -78,7 +80,7 @@ export function Hero() {
             <AnimatedSection animation="fade-up" delay={500}>
               <div className="mt-4 flex justify-center lg:justify-start">
                 <a
-                  href={cityConfig.viberUrl}
+                  href={cityConfig?.viberUrl ?? "viber://chat?number=%2B380664838936"}
                   className="text-primary hover:text-primary/80 font-medium transition-colors underline underline-offset-4 hover:underline-offset-8"
                 >
                   {t.hero.cta.viber}

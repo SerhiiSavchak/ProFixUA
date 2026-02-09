@@ -52,6 +52,25 @@ export const CITY_CONFIG: Record<
   },
 };
 
+// Google Reviews links per city
+export const GOOGLE_REVIEWS: Record<
+  City | "default",
+  { writeUrl: string; viewUrl: string }
+> = {
+  lviv: {
+    writeUrl: "https://g.page/r/PLACEHOLDER_LVIV/review",
+    viewUrl: "https://g.page/r/PLACEHOLDER_LVIV",
+  },
+  dnipro: {
+    writeUrl: "https://g.page/r/PLACEHOLDER_DNIPRO/review",
+    viewUrl: "https://g.page/r/PLACEHOLDER_DNIPRO",
+  },
+  default: {
+    writeUrl: "https://g.page/r/PLACEHOLDER_DEFAULT/review",
+    viewUrl: "https://g.page/r/PLACEHOLDER_DEFAULT",
+  },
+};
+
 // Для обратной совместимости
 export const SITE_CONFIG = CITY_CONFIG.lviv;
 
