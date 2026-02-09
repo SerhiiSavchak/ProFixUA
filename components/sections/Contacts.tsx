@@ -13,7 +13,7 @@ import { CITY_CONFIG } from "@/content/i18n";
 export function Contacts() {
   const { language, t } = useTranslation();
   const { city } = useCityContext();
-  const cityConfig = CITY_CONFIG[city];
+  const cityConfig = city ? CITY_CONFIG[city] : CITY_CONFIG.lviv;
 
   return (
     <Section id="contacts" className="bg-accent/30">

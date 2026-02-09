@@ -9,7 +9,7 @@ import { CITY_CONFIG } from "@/content/i18n";
 export function Footer() {
   const { t } = useTranslation();
   const { city } = useCityContext();
-  const cityConfig = CITY_CONFIG[city];
+  const cityConfig = city ? CITY_CONFIG[city] : CITY_CONFIG.lviv;
   const currentYear = new Date().getFullYear();
 
   return (

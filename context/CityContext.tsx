@@ -5,9 +5,11 @@ import { useCity } from "@/hooks/useCity";
 import { City } from "@/content/i18n";
 
 interface CityContextType {
-  city: City;
+  city: City | null;
   setCity: (city: City) => void;
   isLoaded: boolean;
+  showCityModal: boolean;
+  setShowCityModal: (show: boolean) => void;
 }
 
 const CityContext = createContext<CityContextType | undefined>(undefined);

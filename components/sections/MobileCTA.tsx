@@ -8,7 +8,7 @@ import { CITY_CONFIG } from "@/content/i18n";
 export function MobileCTA() {
   const { t } = useTranslation();
   const { city } = useCityContext();
-  const cityConfig = CITY_CONFIG[city];
+  const cityConfig = city ? CITY_CONFIG[city] : CITY_CONFIG.lviv;
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-background/95 backdrop-blur-sm border-t border-border safe-area-inset-bottom">

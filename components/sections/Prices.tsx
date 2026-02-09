@@ -38,7 +38,7 @@ function MaterialsBlock({
 export function Prices() {
   const { t } = useTranslation();
   const { city } = useCityContext();
-  const cityConfig = CITY_CONFIG[city];
+  const cityConfig = city ? CITY_CONFIG[city] : CITY_CONFIG.lviv;
 
   return (
     <Section id="prices">

@@ -1,15 +1,25 @@
 "use client";
 
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, ExternalLink, PenLine } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Card } from "@/components/ui/Card";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { useTranslation } from "@/context/LanguageContext";
+import { useCityContext } from "@/context/CityContext";
+import { GOOGLE_REVIEWS } from "@/content/i18n";
+
+const REVIEW_BUTTON_LABELS = {
+  write: { ua: "Залишити відгук", ru: "Оставить отзыв", en: "Leave a Review" },
+  view: { ua: "Переглянути відгуки", ru: "Посмотреть отзывы", en: "View Reviews" },
+} as const;
 
 export function Reviews() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+  const { city } = useCityContext();
+
+  const reviewLinks = city ? GOOGLE_REVIEWS[city] : GOOGLE_REVIEWS.default;
 
   return (
     <Section id="reviews" className="bg-accent/30">
@@ -48,6 +58,30 @@ export function Reviews() {
             </AnimatedSection>
           ))}
         </div>
+
+        {/* Google Reviews Buttons */}
+        <AnimatedSection animation="fade-up" delay={500}>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={reviewLinks.writeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary hover-lift"
+            >
+              <PenLine className="w-5 h-5" />
+              {REVIEW_BUTTON_LABELS.write[language]}
+            </a>
+            <a
+              href={reviewLinks.viewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold rounded-xl border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary hover-lift"
+            >
+              <ExternalLink className="w-5 h-5" />
+              {REVIEW_BUTTON_LABELS.view[language]}
+            </a>
+          </div>
+        </AnimatedSection>
       </Container>
     </Section>
   );

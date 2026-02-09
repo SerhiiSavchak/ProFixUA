@@ -15,6 +15,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { CityProvider } from "@/context/CityContext";
 import { Loader } from "@/components/ui/Loader";
+import { CityModal } from "@/components/ui/CityModal";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <CityProvider>
         <LanguageProvider>
           <Loader />
+          <CityModal />
           <Header />
           <main className="min-h-screen pb-20 md:pb-0">
             <Hero />
