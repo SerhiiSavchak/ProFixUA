@@ -58,16 +58,49 @@ export const GOOGLE_REVIEWS: Record<
   { writeUrl: string; viewUrl: string }
 > = {
   lviv: {
-    writeUrl: "https://g.page/r/PLACEHOLDER_LVIV/review",
-    viewUrl: "https://g.page/r/PLACEHOLDER_LVIV",
+    writeUrl: "https://g.page/r/CRXlpjTfjpAVEBM/review",
+    viewUrl: "https://g.page/r/CRXlpjTfjpAVEBM",
   },
   dnipro: {
-    writeUrl: "https://g.page/r/PLACEHOLDER_DNIPRO/review",
-    viewUrl: "https://g.page/r/PLACEHOLDER_DNIPRO",
+    writeUrl: "https://g.page/r/CRXlpjTfjpAVEBM/review",
+    viewUrl: "https://g.page/r/CRXlpjTfjpAVEBM/",
   },
   default: {
-    writeUrl: "https://g.page/r/PLACEHOLDER_DEFAULT/review",
-    viewUrl: "https://g.page/r/PLACEHOLDER_DEFAULT",
+    writeUrl: "https://g.page/r/CRXlpjTfjpAVEBM/review",
+    viewUrl: "https://g.page/r/CRXlpjTfjpAVEBM/",
+  },
+};
+
+// SEO metadata per city (default lang: ua)
+export const CITY_SEO: Record<
+  City,
+  { title: string; description: string; keywords: string[] }
+> = {
+  lviv: {
+    title: "ProFixUA | Сантехнік та електрик у Львові",
+    description:
+      "Терміновий виїзд сантехніка та електрика у Львові. Гарантія на роботи. Працюємо щодня 08:00–22:00. Телефонуйте +380664838936",
+    keywords: [
+      "сантехнік Львів",
+      "електрик Львів",
+      "терміновий виклик",
+      "ремонт труб Львів",
+      "електрика Львів",
+      "ProFixUA",
+    ],
+  },
+  dnipro: {
+    title: "ProFixUA | Сантехнік та електрик у Дніпрі",
+    description:
+      "Терміновий виїзд сантехніка та електрика у Дніпрі. Гарантія на роботи. Працюємо щодня 08:00–22:00. Телефонуйте +380664838936",
+    keywords: [
+      "сантехнік Дніпро",
+      "електрик Дніпро",
+      "терміновий виклик",
+      "ремонт труб Дніпро",
+      "електрика Дніпро",
+      "ProFixUA",
+    ],
   },
 };
 
@@ -92,6 +125,7 @@ export const translations = {
       reviews: "Відгуки",
       gallery: "Галерея",
       contacts: "Контакти",
+      changeCity: "Змінити місто",
     },
     hero: {
       title: "Сантехнік та електрик у {city}",
@@ -209,6 +243,7 @@ export const translations = {
       reviews: "Отзывы",
       gallery: "Галерея",
       contacts: "Контакты",
+      changeCity: "Сменить город",
     },
     hero: {
       title: "Сантехник и электрик {city}",
@@ -326,6 +361,7 @@ export const translations = {
       reviews: "Reviews",
       gallery: "Gallery",
       contacts: "Contacts",
+      changeCity: "Change city",
     },
     hero: {
       title: "Plumber & Electrician {city}",

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Providers } from "@/components/Providers";
 
 const inter = Inter({
   subsets: ["latin", "cyrillic"],
@@ -8,19 +9,19 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ProFixUA | Сантехнік та електрик у Львові",
-  description: "Терміновий виїзд сантехніка та електрика у Львові. Гарантія на роботи. Працюємо щодня 08:00-22:00. Телефонуйте +380664838936",
+  title: "ProFixUA | Сантехнік та електрик",
+  description:
+    "Терміновий виїзд сантехніка та електрика. Гарантія на роботи. Працюємо щодня 08:00–22:00. Оберіть місто: Львів або Дніпро.",
   keywords: [
     "сантехнік",
     "електрик",
-    "Львів",
     "терміновий виклик",
     "ремонт труб",
     "електрика",
     "ProFixUA",
   ],
   openGraph: {
-    title: "ProFixUA | Сантехнік та електрик у Львові",
+    title: "ProFixUA | Сантехнік та електрик",
     description: "Терміновий виїзд • Гарантія • Працюємо щодня",
     type: "website",
     locale: "uk_UA",
@@ -59,7 +60,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-sans antialiased bg-background text-foreground">
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
