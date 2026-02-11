@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useCallback } from "react";
-import { MapPin } from "lucide-react";
+import { MapPin, X } from "lucide-react";
 import { useCityContext } from "@/context/CityContext";
 import { CITIES, City } from "@/content/i18n";
 import { useTranslation } from "@/context/LanguageContext";
@@ -68,7 +68,18 @@ export function CityModal() {
       <div className="absolute inset-0 bg-foreground/60 backdrop-blur-sm" />
 
       {/* Modal */}
-      <div className="relative w-full max-w-md bg-card rounded-2xl shadow-2xl border border-border p-8 animate-in fade-in zoom-in-95 duration-200">
+      <div
+        className="relative w-full max-w-md bg-card rounded-2xl shadow-2xl border border-border p-8 animate-in fade-in zoom-in-95 duration-200"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          type="button"
+          onClick={() => setShowCityModal(false)}
+          className="absolute top-4 right-4 p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-card"
+          aria-label={language === "ru" ? "Закрыть" : language === "en" ? "Close" : "Закрити"}
+        >
+          <X className="w-5 h-5" />
+        </button>
         <div className="flex flex-col items-center gap-6">
           <div className="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
             <MapPin className="w-7 h-7 text-primary" />
@@ -91,13 +102,6 @@ export function CityModal() {
               </button>
             ))}
           </div>
-
-          <button
-            onClick={() => setShowCityModal(false)}
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            {language === "ru" ? "Пропустить" : language === "en" ? "Skip" : "Пропустити"}
-          </button>
         </div>
       </div>
     </div>

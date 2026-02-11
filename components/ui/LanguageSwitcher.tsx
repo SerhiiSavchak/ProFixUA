@@ -107,13 +107,13 @@ export function LanguageSwitcher({ className, compact = false, dropdown = false 
 
   // Desktop version
   return (
-    <div className={cn("flex gap-1", className)}>
+    <div className={cn("flex gap-0.5", className)}>
       {LANGUAGES.map((lang) => (
         <button
           key={lang.code}
           onClick={() => setLanguage(lang.code as Language)}
           className={cn(
-            "px-2 py-1 text-sm font-medium rounded transition-colors cursor-pointer select-none",
+            "px-1.5 py-1 text-xs font-medium rounded transition-colors cursor-pointer select-none",
             language === lang.code
               ? "bg-primary text-primary-foreground"
               : "text-muted-foreground hover:text-foreground hover:bg-accent"

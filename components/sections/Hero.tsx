@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/Badge";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { useTranslation } from "@/context/LanguageContext";
 import { useCityContext } from "@/context/CityContext";
+import { CitySelectButton } from "@/components/ui/CitySelectButton";
 import { CITY_CONFIG } from "@/content/i18n";
 
 export function Hero() {
@@ -53,14 +54,20 @@ export function Hero() {
             </AnimatedSection>
 
             <AnimatedSection animation="fade-up" delay={400}>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4 lg:flex-nowrap lg:justify-start lg:gap-3">
+                {!city && (
+                  <CitySelectButton
+                    variant="hero"
+                    className="w-full sm:w-auto sm:min-w-[140px] lg:min-w-0 min-h-[48px] px-6 py-3.5 text-base lg:px-4 lg:py-2.5 lg:text-sm lg:[&_svg]:w-4 lg:[&_svg]:h-4 text-center"
+                  />
+                )}
                 <Button
                   href={`tel:${cityConfig?.phone ?? "+380664838936"}`}
                   variant="primary"
                   size="lg"
-                  className="hover-lift group"
+                  className="hover-lift group w-full sm:w-auto min-h-[48px] sm:min-w-[140px] lg:min-w-0 lg:min-h-0 lg:px-4 lg:py-2.5 lg:text-sm text-center"
                 >
-                  <Phone className="w-5 h-5 group-hover:animate-bounce" />
+                  <Phone className="w-5 h-5 lg:w-4 lg:h-4 group-hover:animate-bounce shrink-0" />
                   {t.hero.cta.call}
                 </Button>
                 <Button
@@ -69,9 +76,9 @@ export function Hero() {
                   size="lg"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover-lift"
+                  className="hover-lift w-full sm:w-auto min-h-[48px] sm:min-w-[140px] lg:min-w-0 lg:min-h-0 lg:px-4 lg:py-2.5 lg:text-sm text-center"
                 >
-                  <Send className="w-5 h-5" />
+                  <Send className="w-5 h-5 lg:w-4 lg:h-4 shrink-0" />
                   {t.hero.cta.telegram}
                 </Button>
               </div>

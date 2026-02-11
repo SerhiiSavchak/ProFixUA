@@ -126,6 +126,7 @@ export const translations = {
       gallery: "Галерея",
       contacts: "Контакти",
       changeCity: "Змінити місто",
+      selectCity: "Оберіть місто",
     },
     hero: {
       title: "Сантехнік та електрик у {city}",
@@ -244,6 +245,7 @@ export const translations = {
       gallery: "Галерея",
       contacts: "Контакты",
       changeCity: "Сменить город",
+      selectCity: "Выберите город",
     },
     hero: {
       title: "Сантехник и электрик {city}",
@@ -362,6 +364,7 @@ export const translations = {
       gallery: "Gallery",
       contacts: "Contacts",
       changeCity: "Change city",
+      selectCity: "Select city",
     },
     hero: {
       title: "Plumber & Electrician {city}",

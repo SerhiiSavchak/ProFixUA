@@ -14,9 +14,9 @@ export function ThemeToggle({ className, compact = false }: ThemeToggleProps) {
 
   const baseClasses = compact
     ? "p-1.5 rounded-lg bg-accent hover:bg-accent/80 transition-all duration-200"
-    : "p-2 rounded-lg bg-accent hover:bg-accent/80 transition-all duration-200";
+    : "p-1.5 rounded-lg bg-accent hover:bg-accent/80 transition-all duration-200";
 
-  const iconClasses = compact ? "w-4 h-4" : "w-5 h-5";
+  const iconClasses = "w-4 h-4";
 
   if (!isLoaded) {
     return (

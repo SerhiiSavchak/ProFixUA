@@ -26,35 +26,20 @@ const CityContext = createContext<CityContextType | undefined>(undefined);
 export function CityProvider({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const router = useRouter();
-  const [manualModalOpen, setManualModalOpen] = useState(false);
-  const [dismissedOnRoot, setDismissedOnRoot] = useState(false);
+  const [showCityModal, setShowCityModalState] = useState(false);
 
   const city = useMemo(() => cityFromPathname(pathname), [pathname]);
   const isLoaded = true;
 
-  const showCityModal = useMemo(
-    () => (pathname === "/" && !dismissedOnRoot) || manualModalOpen,
-    [pathname, dismissedOnRoot, manualModalOpen]
-  );
-
-  const setShowCityModal = useCallback(
-    (show: boolean) => {
-      if (show) {
-        setManualModalOpen(true);
-        setDismissedOnRoot(false);
-      } else {
-        if (pathname === "/") setDismissedOnRoot(true);
-        setManualModalOpen(false);
-      }
-    },
-    [pathname]
-  );
+  // Modal only opens on explicit user action (city button); never auto-shows on "/"
+  const setShowCityModal = useCallback((show: boolean) => {
+    setShowCityModalState(show);
+  }, []);
 
   const setCity = useCallback(
     (newCity: City) => {
       if (!VALID_CITIES.includes(newCity)) return;
-      setManualModalOpen(false);
-      setDismissedOnRoot(false);
+      setShowCityModalState(false);
       router.push(`/${newCity}`);
     },
     [router]
