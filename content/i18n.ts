@@ -125,6 +125,7 @@ export const translations = {
       reviews: "Відгуки",
       gallery: "Галерея",
       contacts: "Контакти",
+      faq: "Питання та відповіді",
       changeCity: "Змінити місто",
       selectCity: "Оберіть місто",
     },
@@ -187,7 +188,7 @@ export const translations = {
         title: "Оплата роботи майстра",
         items: [
           "Вартість робіт залежить від складності та обсягу завдання",
-          "Остаточну ціну майстер озвучує після огляду та діагностики, але до початку робіт",
+          "Орієнтовну ціну майстер озвучує після огляду та діагностики, але до початку робіт",
           "Жодних прихованих платежів або несподіваних доплат",
           "Оплата здійснюється після виконання робіт і перевірки результату клієнтом",
         ],
@@ -228,6 +229,31 @@ export const translations = {
       schedule: "Графік роботи",
       area: "Зона обслуговування",
     },
+    faq: {
+      title: "Питання та відповіді",
+      items: [
+        {
+          q: "Як працює гарантія?",
+          a: "Гарантія на виконані роботи закріплюється за майстром, який виконував ваше замовлення. Якщо після ремонту виникла несправність з вини майстра, він зобов'язаний приїхати на завчасно узгоджений час та усунути проблему. Якщо майстер не виходить на зв'язок протягом 24 годин, сервіс організує повторний виїзд іншого спеціаліста.",
+        },
+        {
+          q: "Скільки коштує виїзд майстра?",
+          a: "Вартість виїзду в межах міста становить від 500 грн. Якщо об'єкт знаходиться за межами міста, ціна розраховується індивідуально. Майстер повідомляє її по телефону до приїзду. Діагностика та ремонт оплачуються окремо від вартості виїзду.",
+        },
+        {
+          q: "Чи озвучує майстер ціну до початку робіт?",
+          a: "Так. Після діагностики майстер повідомляє орієнтовну або остаточну вартість (залежно від складності ситуації). Роботи розпочинаються лише після вашого погодження.",
+        },
+        {
+          q: "Як здійснюється оплата?",
+          a: "Оплата проводиться після виконання робіт та перевірки їх якості. Якщо з незалежних від клієнта та майстра причин перевірити результат неможливо, питання оплати узгоджується індивідуально через диспетчерську службу.",
+        },
+        {
+          q: "Чи даєте ви документи про виконані роботи?",
+          a: "Так, за запитом клієнта можемо надати акт виконаних робіт.",
+        },
+      ],
+    },
     mobileCta: {
       call: "Зателефонувати",
       write: "Написати",
@@ -244,6 +270,7 @@ export const translations = {
       reviews: "Отзывы",
       gallery: "Галерея",
       contacts: "Контакты",
+      faq: "Вопросы и ответы",
       changeCity: "Сменить город",
       selectCity: "Выберите город",
     },
@@ -306,7 +333,7 @@ export const translations = {
         title: "Оплата работы мастера",
         items: [
           "Стоимость работ зависит от сложности и объёма задания",
-          "Окончательную цену мастер озвучивает после осмотра и диагностики, но до начала работ",
+          "Ориентировочную цену мастер озвучивает после осмотра и диагностики, но до начала работ",
           "Никаких скрытых платежей или неожиданных доплат",
           "Оплата осуществляется после выполнения работ и проверки результата клиентом",
         ],
@@ -347,6 +374,31 @@ export const translations = {
       schedule: "График работы",
       area: "Зона обслуживания",
     },
+    faq: {
+      title: "Вопросы и ответы",
+      items: [
+        {
+          q: "Как работает гарантия?",
+          a: "Гарантия на выполненные работы закрепляется за мастером, который выполнял ваш заказ. Если после ремонта возникла неисправность по вине мастера, он обязан приехать в заранее согласованное время и устранить проблему. Если мастер не выходит на связь в течение 24 часов, сервис организует повторный выезд другого специалиста.",
+        },
+        {
+          q: "Сколько стоит выезд мастера?",
+          a: "Стоимость выезда в пределах города составляет от 500 грн. Если объект находится за пределами города, цена рассчитывается индивидуально. Мастер сообщает её по телефону до приезда. Диагностика и ремонт оплачиваются отдельно от стоимости выезда.",
+        },
+        {
+          q: "Озвучивает ли мастер цену до начала работ?",
+          a: "Да. После диагностики мастер сообщает ориентировочную или окончательную стоимость (в зависимости от сложности ситуации). Работы начинаются только после вашего согласия.",
+        },
+        {
+          q: "Как осуществляется оплата?",
+          a: "Оплата производится после выполнения работ и проверки их качества. Если по независящим от клиента и мастера причинам проверить результат невозможно, вопрос оплаты согласовывается индивидуально через диспетчерскую службу.",
+        },
+        {
+          q: "Даёте ли вы документы о выполненных работах?",
+          a: "Да, по запросу клиента можем предоставить акт выполненных работ.",
+        },
+      ],
+    },
     mobileCta: {
       call: "Позвонить",
       write: "Написать",
@@ -363,6 +415,7 @@ export const translations = {
       reviews: "Reviews",
       gallery: "Gallery",
       contacts: "Contacts",
+      faq: "FAQ",
       changeCity: "Change city",
       selectCity: "Select city",
     },
@@ -425,7 +478,7 @@ export const translations = {
         title: "Payment for Services",
         items: [
           "The cost depends on the complexity and scope of the task",
-          "The final price is provided after inspection and diagnostics, but before work begins",
+          "The approximate price is provided after inspection and diagnostics, but before work begins",
           "No hidden fees or unexpected surcharges",
           "Payment is made after the work is completed and the result is verified by the client",
         ],
@@ -465,6 +518,31 @@ export const translations = {
       title: "Contacts",
       schedule: "Working Hours",
       area: "Service Area",
+    },
+    faq: {
+      title: "Frequently Asked Questions",
+      items: [
+        {
+          q: "How does the warranty work?",
+          a: "The warranty on completed work is tied to the master who performed your order. If a malfunction occurs after the repair due to the master's fault, they are obliged to arrive at a pre-agreed time and fix the problem. If the master does not respond within 24 hours, the service will arrange a repeat visit by another specialist.",
+        },
+        {
+          q: "How much does a master's visit cost?",
+          a: "The cost of a visit within the city starts from 500 UAH. If the site is outside the city, the price is calculated individually. The master will inform you of it by phone before arrival. Diagnostics and repair are paid separately from the visit cost.",
+        },
+        {
+          q: "Does the master quote the price before starting work?",
+          a: "Yes. After diagnostics, the master will provide an approximate or final cost (depending on the complexity of the situation). Work begins only after your approval.",
+        },
+        {
+          q: "How is payment made?",
+          a: "Payment is made after the work is completed and its quality has been verified. If it is impossible to verify the result for reasons beyond the client's and master's control, the payment terms are agreed individually through the dispatch service.",
+        },
+        {
+          q: "Do you provide documents for completed work?",
+          a: "Yes, upon client request we can provide a certificate of completed work.",
+        },
+      ],
     },
     mobileCta: {
       call: "Call",

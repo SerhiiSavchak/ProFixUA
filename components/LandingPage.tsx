@@ -9,6 +9,7 @@ import { Steps } from "@/components/sections/Steps";
 import { Reviews } from "@/components/sections/Reviews";
 import { Gallery } from "@/components/sections/Gallery";
 import { Prices } from "@/components/sections/Prices";
+import { FAQ } from "@/components/sections/FAQ";
 import { Contacts } from "@/components/sections/Contacts";
 import { MobileCTA } from "@/components/sections/MobileCTA";
 import { Loader } from "@/components/ui/Loader";
@@ -26,6 +27,7 @@ export function LandingPage() {
         <Reviews />
         <Gallery />
         <Prices />
+        <FAQ />
         <Contacts />
         <MobileCTA />
       </main>
