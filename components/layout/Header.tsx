@@ -50,12 +50,10 @@ export function Header() {
           </div>
 
           {/* Mobile / Tablet Controls */}
-          <div className="flex lg:hidden flex-1 items-center justify-center min-w-0">
-            <div className="flex items-center gap-1.5 shrink-0">
+          <div className="flex lg:hidden items-center justify-end gap-1.5 shrink-0">
               <CitySelectButton variant="header-mobile" />
-              <LanguageSwitcher dropdown />
-              <ThemeToggle compact />
-            </div>
+            <LanguageSwitcher dropdown />
+            <ThemeToggle compact />
           </div>
         </div>
       </Container>
